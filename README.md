@@ -8,4 +8,4 @@ Click [here](https://tolunaydundar.github.io/super-mario-themed-portfolio-landin
 
 ## License
 
-[GNU General Public License v3.0](https://github.com/tolunaydundar/fcc-personal-portfolio/blob/main/LICENSE)
+[GNU General Public License v3.0](https://github.com/tolunaydundar/super-mario-themed-portfolio-landing-page/blob/main/LICENSE)
