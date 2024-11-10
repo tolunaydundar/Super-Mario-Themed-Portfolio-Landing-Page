@@ -103,7 +103,7 @@ section#about {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #ffcc00;
+  background-color: white;
 }
 
 section#about h2#about-heading {
@@ -226,7 +226,7 @@ section#contact ul#contact-links-list li#contact-instagram:hover img {
 }
 
 footer {
-  background-color: #000c66;
+  background-color: #942222;
   color: white;
 }
 
@@ -254,5 +254,5 @@ footer ul#footer-sources-list li a {
 }
 
 footer ul#footer-sources-list li a:hover {
-  color: #942222;
+  color: #000c66;
 }
