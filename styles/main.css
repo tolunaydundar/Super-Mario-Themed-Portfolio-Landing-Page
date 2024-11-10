@@ -2,6 +2,8 @@ html,
 body {
   width: 100%;
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -10,112 +12,144 @@ body {
   font-family: "Permanent Marker", cursive, "Times New Roman", Times, serif;
 }
 
-#navbar {
-  height: 50px;
+nav {
+  height: 5vh;
   width: 100vw;
-  padding-right: 20px;
+  padding: 0 1rem;
   box-sizing: border-box;
-  display: flex;
   position: fixed;
+  display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
   background-color: #000c66;
 }
 
-#navbar p {
-  margin-left: 20px;
-  margin-right: auto;
+nav header {
   color: white;
 }
 
-#navbar a {
+nav ul#nav-links {
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
-  text-decoration: none;
+  list-style: none;
+  gap: 1rem;
+  padding: 0 1rem;
+  transition: background-color 0.3s;
+}
+
+nav ul#nav-links li {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+nav ul#nav-links li a {
   color: white;
-  padding: 0 15px;
+  text-decoration: none;
 }
 
-#navbar a:hover {
-  background-color: black;
+nav ul#nav-links li a:hover {
+  color: #ffcc00;
 }
 
-#about {
-  height: 100vh;
+section {
+  border-bottom: 3rem solid black;
+}
+
+section#home {
+  padding-top: 5vh;
+  height: 95vh;
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  background-color: #942222;
   color: white;
-  background-color: brown;
   text-shadow: black 1px 0 10px;
-  border-bottom: 2rem solid black;
 }
 
-#about #mario-logo {
+section#home div#home-logo-mario {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
-#about #mario-logo #secret-text {
+section#home div#home-logo-mario p#secret-text {
   display: none;
 }
 
-#about #mario-logo:hover {
-  background-image: url(../images/logo/mario-auditore-logo.png);
-  background-size: 150px;
+section#home div#home-logo-mario:hover {
+  background-image: url("../images/logo/mario-auditore-logo.png");
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-#about #mario-logo:hover img {
+section#home div#home-logo-mario:hover img {
   opacity: 0;
 }
 
-#about #mario-logo:hover #secret-text {
-  display: unset;
+section#home div#home-logo-mario:hover p#secret-text {
+  display: block;
   text-align: center;
 }
 
-#projects {
+section#about {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  border-bottom: 2rem solid black;
+  align-items: center;
+  background-color: #ffcc00;
 }
 
-#projects ul {
+section#about h2#about-heading {
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+
+section#about ul#about-tiles-list {
   list-style-type: none;
   display: grid;
-  grid-template-rows: auto;
   grid-template-columns: repeat(2, 1fr);
-  margin: 0 1rem;
+  gap: 1rem;
+  margin: 1rem;
 }
 
-#projects #project-tiles .project-tile {
+section#about ul#about-tiles-list li {
+  background-color: black;
+  color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+section#about ul#about-tiles-list div.about-tile {
   display: flex;
   flex-direction: column;
+  gap: 1rem;
   align-items: center;
-  justify-content: center;
 }
 
-#projects #project-tiles .project-tile p {
+section#about ul#about-tiles-list div.about-tile img {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+section#about ul#about-tiles-list div.about-tile p.about-tile-description {
   text-align: center;
-  text-shadow: slategrey 1px 0 10px;
 }
 
-#contact {
-  height: 100vh;
+section#contact {
+  min-height: 100vh;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+
   background: rgb(246, 13, 245);
   background: linear-gradient(
     160deg,
@@ -123,62 +157,102 @@ body {
     rgba(254, 165, 165, 1) 57%,
     rgba(255, 255, 255, 1) 99%
   );
+  color: white;
 }
 
-#contact #contact-header {
-  margin-top: 80px;
+section#contact h2#contact-heading {
+  font-size: 2rem;
+  margin: 1rem 0;
+  color: black;
 }
 
-#contact #contact-links {
-  margin: auto;
+section#contact ul#contact-links-list {
+  width: 25%;
+  list-style-type: none;
   display: flex;
-  gap: 15px;
+  flex-direction: row;
+  gap: 1rem;
+  padding: 1rem;
 }
 
-#contact #contact-links a img {
-  height: 100px;
+section#contact ul#contact-links-list li.contact-links-list-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+section#contact ul#contact-links-list li.contact-links-list-child img {
+  width: 100%;
 }
 
-#contact #contact-links #github-logo:hover {
+section#contact ul#contact-links-list li#contact-github:hover {
   background-image: url(../images/logo/github-logo-light.png);
-  background-size: 100px;
+  background-size: contain;
   background-repeat: no-repeat;
 }
 
-#contact #contact-links #github-logo:hover img {
+section#contact ul#contact-links-list li#contact-github:hover img {
   opacity: 0;
 }
 
-#contact #contact-links #linkedin-logo:hover {
+section#contact ul#contact-links-list li#contact-linkedin:hover {
   background-image: url(../images/logo/linkedin-logo-light.png);
-  background-size: 100px;
+  background-size: contain;
   background-repeat: no-repeat;
 }
 
-#contact #contact-links #linkedin-logo:hover img {
+section#contact ul#contact-links-list li#contact-linkedin:hover img {
   opacity: 0;
 }
 
-#contact #contact-links #twitter-logo:hover {
-  background-image: url("../images/logo/twitter-logo-light.png");
-  background-size: 100px;
+section#contact ul#contact-links-list li#contact-twitter:hover {
+  background-image: url(../images/logo/twitter-logo-light.png);
+  background-size: contain;
   background-repeat: no-repeat;
 }
 
-#contact #contact-links #twitter-logo:hover img {
+section#contact ul#contact-links-list li#contact-twitter:hover img {
   opacity: 0;
 }
 
-#contact #contact-links #instagram-logo:hover {
-  background-image: url("../images/logo/instagram-logo-light.png");
-  background-size: 100px;
+section#contact ul#contact-links-list li#contact-instagram:hover {
+  background-image: url(../images/logo/instagram-logo-light.png);
+  background-size: contain;
   background-repeat: no-repeat;
 }
 
-#contact #contact-links #instagram-logo:hover img {
+section#contact ul#contact-links-list li#contact-instagram:hover img {
   opacity: 0;
 }
 
-#contact #image-sources div {
+footer {
+  background-color: #000c66;
+  color: white;
+}
+
+footer ul#footer-sources-list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+footer ul#footer-sources-list li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  gap: 0.5rem;
+}
+
+footer ul#footer-sources-list li a {
+  color: #ffcc00;
+  text-decoration: none;
+}
+
+footer ul#footer-sources-list li a:hover {
+  color: #942222;
 }
