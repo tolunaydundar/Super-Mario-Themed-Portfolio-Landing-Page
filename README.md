@@ -1,10 +1,10 @@
-# Super Mario Themed Portfolio Landing Page
+# It's a me! Mario! - Super Mario Themed Landing Page
 
-Built using only HTML and CSS.
+Built using plain HTML and CSS.
 
 ## Live Preview
 
-Click [here](https://tolunaydundar.github.io/super-mario-themed-portfolio-landing-page) to see the project on [GitHub Pages](https://pages.github.com/).
+Click [here](https://tolunaydundar.github.io/its-a-me-mario) to see the project on [GitHub Pages](https://pages.github.com/).
 
 ## License
 
