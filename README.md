@@ -1,4 +1,4 @@
-# It's a me! Mario! - Super Mario Themed Landing Page
+# It's a me! Mario! - Super Mario Themed Fictional Portfolio
 
 Built using plain HTML and CSS.
 
